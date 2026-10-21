@@ -248,3 +248,12 @@ footer a:hover{color:#fff}
 /* 404 */
 .nf{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:40px 24px}
 .nf .code{font-size:4rem;font-weight:700;color:var(--ink);line-height:1}
+
+/* price in KZT (dark price box) */
+.price-box .big-kzt{font-size:1.35rem;font-weight:600;color:var(--gold-soft);margin-top:3px;line-height:1}
+
+/* footer payment logos */
+.pay-foot{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:22px 0 4px;border-top:1px solid rgba(255,255,255,.08);margin-top:24px}
+.pay-foot .lbl{font-size:.82rem;color:#8FA498;margin-right:2px}
+.card-badge{display:inline-flex;align-items:center;justify-content:center;width:52px;height:32px;background:#fff;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.card-badge svg{display:block}

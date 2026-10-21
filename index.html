@@ -54,8 +54,8 @@
     </div>
     <div class="hero-card">
       <div class="k" data-i18n="card.k">Platform access</div>
-      <div class="price">15 000 USD <small data-i18n="card.per">/ licence</small></div>
-      <div class="hint" data-i18n="card.cur">Card payments are processed in tenge (KZT) at the National Bank of Kazakhstan rate on the payment date.</div>
+      <div class="price">15 000 USD <small>/ 6 750 000 ₸</small></div>
+      <div class="hint" data-i18n="card.cur">Indicative tenge amount. The card payment is charged in tenge (KZT) at the National Bank of Kazakhstan rate on the payment date.</div>
       <ul>
         <li data-i18n="card.li1">Full access to all platform modules</li>
         <li data-i18n="card.li2">Full digital-processing cycle for one IP object</li>
@@ -177,7 +177,8 @@
       <div class="price-box">
         <div class="k" style="color:var(--gold-soft);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600" data-i18n="price.boxk">Access cost</div>
         <div class="big" style="margin-top:10px">15 000 USD</div>
-        <div class="cur" data-i18n="price.boxcur">Card payment in tenge (KZT)<br>at the NBK rate on the payment date</div>
+        <div class="big-kzt">/ 6 750 000 ₸</div>
+        <div class="cur" data-i18n="price.boxcur">Indicative tenge amount. The card payment is charged in tenge (KZT) at the NBK rate on the payment date.</div>
         <a href="order.html" class="btn btn-gold btn-block" data-i18n="price.boxbtn">Proceed to request</a>
         <div class="small" style="color:#9FB4A6;margin-top:12px" data-i18n="price.boxnote">Payment is made in tranches; the final cost and scope are fixed in the contract (offer).</div>
       </div>
@@ -281,7 +282,12 @@
         <a href="privacy.html#cookie" data-i18n="foot.cookie">Cookie use</a>
       </div>
     </div>
-    <p class="disclaimer" data-i18n="foot.disc">MusharaqaHub is software provided under the SaaS model on a limited-licence basis. Its activity is in the field of data processing. The platform is not a financial institution, does not provide investment, brokerage or insurance services, does not carry out transactions with money, securities or digital assets, does not issue or enable the circulation of digital assets, and does not guarantee any profit or financial result. All decisions made by users based on the platform's data are their own. Jurisdiction: Republic of Kazakhstan.</p>
+    <div class="pay-foot">
+      <span class="lbl" data-i18n="foot.accept">We accept</span>
+      <span class="card-badge" aria-label="Visa"><svg width="42" height="15" viewBox="0 0 48 16" xmlns="http://www.w3.org/2000/svg"><text x="24" y="13" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" font-style="italic" letter-spacing="1" fill="#1A1F71">VISA</text></svg></span>
+      <span class="card-badge" aria-label="Mastercard"><svg width="38" height="24" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="12" r="7" fill="#EB001B"/><circle cx="23" cy="12" r="7" fill="#F79E1B"/><path fill="#FF5F00" d="M19 6.3c1.9 1.6 3.1 4 3.1 5.7s-1.2 4.1-3.1 5.7c-1.9-1.6-3.1-4-3.1-5.7s1.2-4.1 3.1-5.7z"/></svg></span>
+    </div>
+    <p class="disclaimer" data-i18n="foot.disc">MusharaqaHub is software provided under the SaaS model on a limited-licence basis. Its activity is in the field of data processing. The platform is not a financial institution, does not provide investment, brokerage or insurance services, does not carry out transactions with money, securities or digital assets, does not issue or enable the circulation of digital assets, and does not guarantee any profit or financial result. All decisions made by users based on the platform's data are their own. The company is registered in the Astana International Financial Centre (AIFC), Republic of Kazakhstan.</p>
     <p class="copy">© 2026 MusharaqaHub. <span data-i18n="foot.rights">All rights reserved.</span></p>
   </div>
 </footer>
@@ -302,7 +308,7 @@ const RU = {
  "hero.cta1":"Оставить заявку →","hero.cta2":"Возможности платформы",
  "hero.note":"Программный продукт. Не является финансовой организацией и не оказывает инвестиционных услуг.",
  "card.k":"Доступ к платформе","card.per":"/ лицензия",
- "card.cur":"Оплата банковской картой проводится в тенге (KZT) по курсу Национального Банка РК на дату платежа.",
+ "card.cur":"Ориентировочная сумма в тенге. Оплата картой списывается в тенге (KZT) по курсу Национального Банка РК на дату платежа.",
  "card.li1":"Полный доступ ко всем модулям платформы","card.li2":"Полный цикл цифровой обработки одного объекта ИС","card.li3":"Техническая поддержка на весь срок лицензии","card.li4":"Обновления ПО в течение срока лицензии",
  "card.btn":"Оформить доступ",
  "strip.1t":"SaaS по лицензии","strip.1s":"Ограниченная лицензия на ПО","strip.2t":"Обработка данных","strip.2s":"Структурирование и документооборот","strip.3t":"Защищённая среда","strip.3s":"HTTPS, разграничение доступа","strip.4t":"Оплата картой","strip.4s":"Visa / Mastercard",
@@ -331,7 +337,7 @@ const RU = {
  "why.4h":"Компания в МФЦА","why.4p":"Зарегистрирована в Международном финансовом центре «Астана» по стандартам английского права в международной регуляторной среде.",
  "price.eyebrow":"Стоимость и условия","price.h2":"Ограниченная лицензия на ПО","price.lead":"Доступ к платформе предоставляется на условиях ограниченной лицензии на программное обеспечение. Пользователь получает право использования всех модулей платформы, включая полный цикл цифровой обработки данных одного объекта ИС.",
  "price.li1":"Полный доступ ко всем модулям на согласованный период","price.li2":"10 этапов цифровой обработки одного объекта ИС","price.li3":"Техническое сопровождение на весь срок лицензии","price.li4":"Обновления программного обеспечения в течение срока лицензии",
- "price.boxk":"Стоимость доступа","price.boxcur":"Оплата банковской картой — в тенге (KZT)<br>по курсу НБ РК на дату платежа","price.boxbtn":"Перейти к оформлению","price.boxnote":"Оплата производится траншами; итоговая стоимость и состав услуг фиксируются в договоре (оферте).",
+ "price.boxk":"Стоимость доступа","price.boxcur":"Ориентировочная сумма в тенге. Списание в тенге (KZT) по курсу НБ РК на дату платежа.","price.boxbtn":"Перейти к оформлению","price.boxnote":"Оплата производится траншами; итоговая стоимость и состав услуг фиксируются в договоре (оферте).",
  "gov.eyebrow":"Правовой статус","gov.h2":"Зарегистрированная и подотчётная компания","gov.lead":"MusharaqaHUB PLC действует как IT-компания в признанной международной правовой среде.",
  "gov.c1k":"Юрисдикция","gov.c1h":"Публичная компания МФЦА","gov.c1p":"Зарегистрирована в Международном финансовом центре «Астана», действует по нормам английского общего права.",
  "gov.c2k":"Регистрация","gov.c2h":"БИН 260140901516","gov.c2p":"Зарегистрирована 29 января 2026 года Регистратором МФЦА (AFSA).",
@@ -349,8 +355,8 @@ const RU = {
  "cta.eyebrow":"Начать работу","cta.h2":"Готовы подключить платформу?","cta.lead":"Оставьте заявку — специалист свяжется с вами, уточнит параметры объекта ИС и подготовит предложение на доступ к платформе MusharaqaHub.","cta.btn":"Оформить заявку →",
  "foot.addr":"Международный финансовый центр «Астана»,<br>проспект Мангилик Ел, 55/23, офис 334, Астана","foot.tel":"Тел.",
  "foot.nav":"Навигация","foot.docs":"Документы","foot.offer":"Публичная оферта","foot.privacy":"Политика конфиденциальности","foot.refund":"Условия возврата","foot.cookie":"Использование cookie",
- "foot.disc":"MusharaqaHub — программное обеспечение, предоставляемое по модели SaaS на условиях ограниченной лицензии. Деятельность осуществляется в сфере обработки данных. Платформа не является финансовой организацией, не оказывает инвестиционных, брокерских, страховых услуг, не осуществляет операций с денежными средствами, ценными бумагами или цифровыми активами, не выпускает и не обеспечивает оборот цифровых активов, не гарантирует получение прибыли или иного финансового результата. Все решения, принимаемые пользователями на основе данных платформы, являются их самостоятельными решениями. Юрисдикция: Республика Казахстан.",
- "foot.rights":"Все права защищены.",
+ "foot.disc":"MusharaqaHub — программное обеспечение, предоставляемое по модели SaaS на условиях ограниченной лицензии. Деятельность осуществляется в сфере обработки данных. Платформа не является финансовой организацией, не оказывает инвестиционных, брокерских, страховых услуг, не осуществляет операций с денежными средствами, ценными бумагами или цифровыми активами, не выпускает и не обеспечивает оборот цифровых активов, не гарантирует получение прибыли или иного финансового результата. Все решения, принимаемые пользователями на основе данных платформы, являются их самостоятельными решениями. Компания зарегистрирована в Международном финансовом центре «Астана» (МФЦА), Республика Казахстан.",
+ "foot.rights":"Все права защищены.","foot.accept":"Принимаем к оплате",
  "cookie.txt":"Мы используем файлы cookie для работы сайта и аналитики. Продолжая пользоваться сайтом, вы соглашаетесь с <a href=\"privacy.html#cookie\" style=\"color:var(--ink);font-weight:600\">политикой использования cookie</a>.",
  "cookie.btn":"Принять"
 };
