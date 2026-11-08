@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="title">Payment flow — MusharaqaHub</title>
+<link rel="icon" href="logo-icon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site"><div class="shell nav">
+  <a href="index.html" class="brand"><img class="mark" src="logo-icon.png" alt=""><span class="bn">Musharaqa<b>Hub</b></span></a>
+  <div class="nav-cta"><div class="lang-switch"><button type="button" data-lang="en" class="active" onclick="setLang('en')">EN</button><button type="button" data-lang="ru" onclick="setLang('ru')">RU</button><button type="button" data-lang="kz" onclick="setLang('kz')">KZ</button></div><a href="index.html" class="btn btn-ghost" data-i18n="home">← Home</a></div>
+</div></header>
+
+<section class="shell" style="max-width:860px;padding:44px 24px">
+  <span class="eyebrow" data-i18n="eyebrow">Payment flow</span>
+  <h1 style="margin:8px 0 10px" data-i18n="h1">How payment and the client journey work</h1>
+  <p class="lead" data-i18n="lead">The full client path: from submitting a request to accessing the platform. Card payments are processed by the PayLink internet-acquiring system; settlement is in tenge (KZT).</p>
+
+  <ol class="flow-steps">
+    <li><div><h3 data-i18n="s1h">1. Request</h3><p data-i18n="s1p">The client fills in the request form on the site (order.html). The data is sent to MusharaqaHub; the client sees a confirmation page.</p></div></li>
+    <li><div><h3 data-i18n="s2h">2. Offer and invoice</h3><p data-i18n="s2p">A specialist clarifies the scope, the parties agree the cost, and the client receives an offer and an invoice with the amount in tenge (KZT).</p></div></li>
+    <li><div><h3 data-i18n="s3h">3. Checkout</h3><p data-i18n="s3p">In the personal account the client opens the payment page (payment.html): order number, service, amount in KZT, and a "Pay by card" button.</p></div></li>
+    <li><div><h3 data-i18n="s4h">4. Secure payment (PayLink)</h3><p data-i18n="s4p">The client is redirected to the secure PayLink page, enters card details (Visa / Mastercard) and passes 3-D Secure. Card data is not transferred to or stored by MusharaqaHub.</p></div></li>
+    <li><div><h3 data-i18n="s5h">5. Result</h3><p data-i18n="s5p">PayLink processes the payment and redirects the client back: to the success page (success.html) or the failure page (fail.html). An electronic payment confirmation is sent to the client.</p></div></li>
+    <li><div><h3 data-i18n="s6h">6. Access to the platform</h3><p data-i18n="s6p">After successful payment, access to the personal account and the ordered modules is granted; processing of the IP object continues through its stages.</p></div></li>
+    <li><div><h3 data-i18n="s7h">7. Refund</h3><p data-i18n="s7p">A refund, where applicable, is made to the same bank card under the Refund Terms, in tenge (KZT).</p></div></li>
+  </ol>
+
+  <div class="pay-note" style="margin-top:28px" data-i18n="note"><strong>Test access.</strong> A demonstration personal account is available for review at <a href="cabinet.html" style="color:var(--ink);font-weight:600">cabinet.html</a> — login: demo@musharaqahub.com, password: demo2026. It is a demo environment with sample data and no real transactions.</div>
+
+  <p class="small muted" style="margin-top:18px" data-i18n="docs">Related documents: <a href="oferta.html" style="color:var(--ink);font-weight:600">Public Offer</a>, <a href="refund.html" style="color:var(--ink);font-weight:600">Refund Terms</a>, <a href="privacy.html" style="color:var(--ink);font-weight:600">Privacy Policy</a>.</p>
+</section>
+
+<footer class="site"><div class="shell"><p class="copy">© 2026 MusharaqaHub</p></div></footer>
+
+<script>
+const RU={
+"title":"Платёжный флоу — MusharaqaHub","home":"← На главную","eyebrow":"Платёжный флоу",
+"h1":"Как устроены оплата и клиентский путь",
+"lead":"Полный путь клиента: от подачи заявки до доступа к платформе. Оплата картой обрабатывается системой интернет-эквайринга PayLink; расчёты — в тенге (KZT).",
+"s1h":"1. Заявка","s1p":"Клиент заполняет форму заявки на сайте (order.html). Данные отправляются в MusharaqaHub; клиент видит страницу подтверждения.",
+"s2h":"2. Предложение и счёт","s2p":"Специалист уточняет объём, стороны согласовывают стоимость, клиент получает оферту и счёт с суммой в тенге (KZT).",
+"s3h":"3. Оформление оплаты","s3p":"В личном кабинете клиент открывает страницу оплаты (payment.html): номер заказа, услуга, сумма в KZT и кнопка «Оплатить картой».",
+"s4h":"4. Защищённая оплата (PayLink)","s4p":"Клиент перенаправляется на защищённую страницу PayLink, вводит данные карты (Visa / Mastercard) и проходит 3-D Secure. Данные карты MusharaqaHub не передаются и не хранятся.",
+"s5h":"5. Результат","s5p":"PayLink обрабатывает платёж и возвращает клиента обратно: на страницу успеха (success.html) или ошибки (fail.html). Клиенту направляется электронное подтверждение оплаты.",
+"s6h":"6. Доступ к платформе","s6p":"После успешной оплаты предоставляется доступ к личному кабинету и оплаченным модулям; обработка объекта ИС продолжается по этапам.",
+"s7h":"7. Возврат","s7p":"Возврат, если применим, производится на ту же банковскую карту согласно «Условиям возврата», в тенге (KZT).",
+"note":"<strong>Тестовый доступ.</strong> Демонстрационный личный кабинет для проверки доступен по адресу <a href=\"cabinet.html\" style=\"color:var(--ink);font-weight:600\">cabinet.html</a> — логин: demo@musharaqahub.com, пароль: demo2026. Это демо-среда с демо-данными, без реальных операций.",
+"docs":"Связанные документы: <a href=\"oferta.html\" style=\"color:var(--ink);font-weight:600\">Публичная оферта</a>, <a href=\"refund.html\" style=\"color:var(--ink);font-weight:600\">Условия возврата</a>, <a href=\"privacy.html\" style=\"color:var(--ink);font-weight:600\">Политика конфиденциальности</a>."
+};
+const KZ={"title": "Төлем флоуы — MusharaqaHub", "home": "← Басты бетке", "eyebrow": "Төлем флоуы", "h1": "Төлем мен клиенттік жол қалай ұйымдастырылған", "lead": "Клиенттің толық жолы: өтінім беруден платформаға қолжетімділікке дейін. Картамен төлемді PayLink интернет-эквайринг жүйесі өңдейді; есеп айырысу теңгемен (KZT).", "s1h": "1. Өтінім", "s1p": "Клиент сайтта өтінім формасын толтырады (order.html). Деректер MusharaqaHub-қа жіберіледі; клиент растау бетін көреді.", "s2h": "2. Ұсыныс және шот", "s2p": "Маман көлемді нақтылайды, тараптар құнды келіседі, клиент оферта мен сомасы теңгемен (KZT) көрсетілген шот алады.", "s3h": "3. Төлемді ресімдеу", "s3p": "Жеке кабинетте клиент төлем бетін ашады (payment.html): тапсырыс нөмірі, қызмет, сома KZT-мен және «Картамен төлеу» түймесі.", "s4h": "4. Қорғалған төлем (PayLink)", "s4p": "Клиент PayLink қорғалған бетіне бағытталады, карта деректерін (Visa / Mastercard) енгізеді және 3-D Secure өтеді. Карта деректері MusharaqaHub-қа берілмейді және онда сақталмайды.", "s5h": "5. Нәтиже", "s5p": "PayLink төлемді өңдейді және клиентті кері қайтарады: сәттілік бетіне (success.html) немесе қателік бетіне (fail.html). Клиентке төлемнің электрондық растауы жіберіледі.", "s6h": "6. Платформаға қолжетімділік", "s6p": "Сәтті төлемнен кейін жеке кабинетке және төленген модульдерге қолжетімділік беріледі; ЗМ объектісін өңдеу кезеңдер бойынша жалғасады.", "s7h": "7. Қайтару", "s7p": "Қайтару, қолданылатын болса, «Қайтару шарттарына» сәйкес сол банктік картаға теңгемен (KZT) жүргізіледі.", "note": "<strong>Сынақ қолжетімділігі.</strong> Тексеруге арналған демонстрациялық жеке кабинет мына мекенжайда қолжетімді: <a href=\"cabinet.html\" style=\"color:var(--ink);font-weight:600\">cabinet.html</a> — логин: demo@musharaqahub.com, құпиясөз: demo2026. Бұл демо-деректері бар, нақты операциялары жоқ демо-орта.", "docs": "Байланысты құжаттар: <a href=\"oferta.html\" style=\"color:var(--ink);font-weight:600\">Жария оферта</a>, <a href=\"refund.html\" style=\"color:var(--ink);font-weight:600\">Қайтару шарттары</a>, <a href=\"privacy.html\" style=\"color:var(--ink);font-weight:600\">Құпиялылық саясаты</a>."};
+function setLang(l){document.documentElement.lang=l;document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(l!=='en'){if(el.getAttribute('data-en')===null)el.setAttribute('data-en',el.innerHTML);var _d=(l==='kz'?KZ:RU);if(_d&&_d[k]!=null)el.innerHTML=_d[k];else el.innerHTML=el.getAttribute('data-en');}else if(el.getAttribute('data-en')!==null){el.innerHTML=el.getAttribute('data-en');}});const t=document.querySelector('[data-i18n="title"]');if(t)document.title=t.textContent;document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.toggle('active',b.getAttribute('data-lang')===l));try{localStorage.setItem('lang',l)}catch(e){}}
+try{var _s=localStorage.getItem('lang');if(_s==='ru'||_s==='kz')setLang(_s);}catch(e){}
+</script>
+</body>
+</html>

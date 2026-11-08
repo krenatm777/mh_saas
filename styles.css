@@ -257,3 +257,52 @@ footer a:hover{color:#fff}
 .pay-foot .lbl{font-size:.82rem;color:#8FA498;margin-right:2px}
 .card-badge{display:inline-flex;align-items:center;justify-content:center;width:52px;height:32px;background:#fff;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.18)}
 .card-badge svg{display:block}
+
+/* "from" entry price under hero card price */
+.price-from{font-size:.9rem;color:var(--gold-deep);font-weight:600;margin-top:3px}
+
+/* ===== demo cabinet / payment / result pages ===== */
+.demo-ribbon{background:var(--gold);color:#1a1405;text-align:center;font-size:.82rem;font-weight:600;padding:7px 16px;letter-spacing:.02em}
+.auth-wrap{max-width:420px;margin:48px auto;padding:0 20px}
+.auth-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px;box-shadow:var(--shadow)}
+.auth-card h1{font-size:1.5rem;margin-bottom:6px}
+.auth-card .sub{color:var(--muted);font-size:.92rem;margin-bottom:20px}
+.testcreds{background:var(--paper-2);border:1px dashed var(--line-2);border-radius:9px;padding:12px 14px;font-size:.86rem;margin:4px 0 20px;line-height:1.7}
+.testcreds b{color:var(--ink)}
+.auth-card label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px}
+.auth-err{color:#B4231F;font-size:.88rem;margin-top:12px;display:none}
+
+.dash-top{background:var(--ink-deep);color:#E7EFE8}
+.dash-top .shell{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.dash-top .brand{color:#fff}.dash-top .brand b{color:var(--gold-soft)}
+.dash-top .who{font-size:.9rem;color:#AdBfB4;display:flex;align-items:center;gap:14px}
+.dash-wrap{display:none}
+.dash-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;margin-top:30px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:var(--shadow-sm)}
+.panel h3{font-size:1.06rem;margin-bottom:4px}
+.panel .meta{font-size:.84rem;color:var(--muted)}
+.status-pill{display:inline-block;font-size:.74rem;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.02em}
+.sp-proc{background:#FFF1CC;color:#8a6300}.sp-ok{background:#D9F0E2;color:#1C7A4D}.sp-wait{background:#FBE3D4;color:#9A4A16}
+.progress{height:8px;background:var(--paper-2);border-radius:6px;overflow:hidden;margin-top:14px}
+.progress > i{display:block;height:100%;background:var(--gold);border-radius:6px}
+.mod-row,.doc-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.93rem}
+.mod-row:last-child,.doc-row:last-child{border-bottom:none}
+.doc-row a{color:var(--ink);font-weight:600}
+.bill-row{display:flex;justify-content:space-between;padding:9px 0;font-size:.95rem;border-bottom:1px solid var(--line)}
+.bill-row.total{font-weight:700;color:var(--ink);border-bottom:none;font-size:1.05rem;padding-top:14px}
+
+/* payment / checkout */
+.pay-wrap{max-width:720px;margin:40px auto;padding:0 20px}
+.order-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;box-shadow:var(--shadow)}
+.order-line{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.96rem}
+.order-line.total{font-weight:700;color:var(--ink);font-size:1.2rem;border-bottom:none;padding-top:16px}
+.pay-note{background:var(--paper-2);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 18px;margin:18px 0;font-size:.9rem}
+.secure-row{display:flex;align-items:center;gap:10px;justify-content:center;margin-top:16px;color:var(--muted);font-size:.84rem;flex-wrap:wrap}
+.result-wrap{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:40px 24px}
+.result-ic{width:76px;height:76px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.4rem;color:#fff}
+.result-ic.ok{background:var(--ok)}.result-ic.fail{background:#B4231F}
+.flow-steps{counter-reset:fs;max-width:760px;margin:30px auto 0;display:grid;gap:16px}
+.flow-steps li{counter-increment:fs;list-style:none;display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.flow-steps li::before{content:counter(fs);flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+.flow-steps h3{font-size:1rem}.flow-steps p{font-size:.9rem;color:var(--muted);margin-top:3px}
+@media(max-width:760px){.dash-grid{grid-template-columns:1fr}}

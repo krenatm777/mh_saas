@@ -12,14 +12,14 @@
 <header class="site"><div class="shell nav">
   <a href="index.html" class="brand"><img class="mark" src="logo-icon.png" alt=""><span class="bn">Musharaqa<b>Hub</b></span></a>
   <div class="nav-cta">
-    <div class="lang-switch"><button type="button" data-lang="en" class="active" onclick="setLang('en')">EN</button><button type="button" data-lang="ru" onclick="setLang('ru')">RU</button></div>
+    <div class="lang-switch"><button type="button" data-lang="en" class="active" onclick="setLang('en')">EN</button><button type="button" data-lang="ru" onclick="setLang('ru')">RU</button><button type="button" data-lang="kz" onclick="setLang('kz')">KZ</button></div>
     <a href="index.html" class="btn btn-ghost" data-i18n="back">← Home</a>
   </div>
 </div></header>
 
 <div class="shell">
 <div class="legal">
-<p class="small muted" style="margin:0 0 18px" data-i18n="govnote">English and Russian versions are provided. In case of any discrepancy, the Russian version prevails (the document is governed by the law of the Republic of Kazakhstan).</p>
+<p class="small muted" style="margin:0 0 18px" data-i18n="govnote">English, Russian and Kazakh versions are provided. In case of any discrepancy, the Russian version prevails (the document is governed by the law of the Republic of Kazakhstan).</p>
 <h1 data-i18n="h1">Refund Terms</h1>
 <p class="updated" data-i18n="updated">Version of 10 October 2026.</p>
 
@@ -60,7 +60,7 @@
 <script>
 const RU={
 "title":"Условия возврата — MusharaqaHub","back":"← На главную",
-"govnote":"Документ представлен на русском и английском языках. При расхождении преимущественную силу имеет русская версия (документ регулируется правом Республики Казахстан).",
+"govnote":"Документ представлен на русском, английском и казахском языках. При расхождении преимущественную силу имеет русская версия (документ регулируется правом Республики Казахстан).",
 "h1":"Условия возврата денежных средств","updated":"Редакция от 10 октября 2026 г.",
 "intro":"Настоящие Условия регулируют порядок возврата денежных средств, оплаченных за доступ к платформе MusharaqaHub, и являются неотъемлемой частью <a href=\"oferta.html\">Публичной оферты</a>.",
 "h2_1":"1. Общие положения","p1":"Предметом оплаты является ограниченная лицензия на программное обеспечение и услуги по цифровой обработке данных (услуга, оказываемая в электронной форме). Возврат производится на ту же банковскую карту, с которой была произведена оплата.",
@@ -70,14 +70,15 @@ const RU={
 "p4cur":"Возврат осуществляется в тенге (KZT). Разница, возникшая из-за изменения курса валют между датой оплаты и датой возврата, Исполнителем не компенсируется.",
 "h2_5":"5. Контакты","phone":"Тел.","l.offer":"Оферта","l.privacy":"Конфиденциальность"
 };
+const KZ={"title": "Қайтару шарттары — MusharaqaHub", "back": "← Басты бетке", "govnote": "Құжат орыс, ағылшын және қазақ тілдерінде ұсынылған. Алшақтық болған жағдайда орыс тіліндегі нұсқа басым күшке ие болады (құжат Қазақстан Республикасының құқығымен реттеледі).", "h1": "Ақшаны қайтару шарттары", "updated": "2026 жылғы 10 қазандағы редакция.", "intro": "Осы Шарттар MusharaqaHub платформасына қолжетімділік үшін төленген ақшаны қайтару тәртібін реттейді және <a href=\"oferta.html\">Жария офертаның</a> ажырамас бөлігі болып табылады.", "h2_1": "1. Жалпы ережелер", "p1": "Төлем нысанасы бағдарламалық қамтамасыз етуге шектеулі лицензия және деректерді цифрлық өңдеу бойынша қызметтер (электрондық нысанда көрсетілетін қызмет) болып табылады. Қайтару төлем жүргізілген сол банктік картаға жүргізіледі.", "h2_2": "2. Қайтару қашан мүмкін", "l2_1": "Платформаға қолжетімділік берілгенге және қызметтер көрсетіле бастағанға дейін — толық көлемде;", "l2_2": "егер қызмет Орындаушыға байланысты себептермен көрсетілмейтін болса — толық көлемде;", "l2_3": "егер қызмет ішінара көрсетілген болса — нақты көрсетілген қызметтер (өткен кезеңдер) көлеміне барабар, орындалған жұмыстар құнын шегеріп.", "h2_3": "3. Қайтару қашан жүргізілмейді", "l3_1": "Платформаға қолжетімділік берілгеннен және қызметтер көрсетіле басталғаннан кейін — нақты көрсетілген қызметтер бөлігінде;", "l3_2": "Пайдаланушы оферта шарттарын немесе ҚР заңнамасын бұзған кезде;", "l3_3": "Пайдаланушы дұрыс емес деректер ұсынған немесе ЗМ объектісіне құқықтары болмаған кезде.", "h2_4": "4. Қайтару тәртібі", "o4_1": "Пайдаланушы <a href=\"mailto:info@musharaqahub.com\">info@musharaqahub.com</a> мекенжайына тегін, атын, әкесінің атын, төлем күні мен сомасын, қайтару себебін көрсете отырып қайтаруға өтініш жібереді.", "o4_2": "Орындаушы өтінішті 10 (он) жұмыс күні ішінде қарайды.", "o4_3": "Оң шешім қабылданған жағдайда ақша төлем жүргізілген картаға 10 (он) жұмыс күніне дейінгі мерзімде қайтарылады (есепке алудың нақты мерзімі картаны шығарушы банкке байланысты).", "p4cur": "Қайтару теңгемен (KZT) жүзеге асырылады. Төлем күні мен қайтару күні арасындағы валюта бағамының өзгеруінен туындаған айырманы Орындаушы өтемейді.", "h2_5": "5. Байланыстар", "phone": "Тел.", "l.offer": "Оферта", "l.privacy": "Құпиялылық"};
 function setLang(l){document.documentElement.lang=l;
  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');
-  if(l==='ru'){if(el.getAttribute('data-en')===null)el.setAttribute('data-en',el.innerHTML);if(RU[k]!=null)el.innerHTML=RU[k];}
+  if(l!=='en'){if(el.getAttribute('data-en')===null)el.setAttribute('data-en',el.innerHTML);var _d=(l==='kz'?KZ:RU);if(_d&&_d[k]!=null)el.innerHTML=_d[k];else el.innerHTML=el.getAttribute('data-en');}
   else if(el.getAttribute('data-en')!==null){el.innerHTML=el.getAttribute('data-en');}});
  const t=document.querySelector('[data-i18n="title"]');if(t)document.title=t.textContent;
  document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.toggle('active',b.getAttribute('data-lang')===l));
  try{localStorage.setItem('lang',l)}catch(e){}}
-try{if(localStorage.getItem('lang')==='ru')setLang('ru');}catch(e){}
+try{var _s=localStorage.getItem('lang');if(_s==='ru'||_s==='kz')setLang(_s);}catch(e){}
 </script>
 </body>
 </html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="title">Client area (demo) — MusharaqaHub</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="logo-icon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="demo-ribbon" data-i18n="ribbon">Demonstration / test environment — sample data, no real transactions</div>
+
+<!-- LOGIN -->
+<section id="login">
+  <header class="site"><div class="shell nav">
+    <a href="index.html" class="brand"><img class="mark" src="logo-icon.png" alt=""><span class="bn">Musharaqa<b>Hub</b></span></a>
+    <div class="nav-cta"><div class="lang-switch"><button type="button" data-lang="en" class="active" onclick="setLang('en')">EN</button><button type="button" data-lang="ru" onclick="setLang('ru')">RU</button><button type="button" data-lang="kz" onclick="setLang('kz')">KZ</button></div><a href="index.html" class="btn btn-ghost" data-i18n="home">← Home</a></div>
+  </div></header>
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <h1 data-i18n="login.h1">Client area</h1>
+      <div class="sub" data-i18n="login.sub">Sign in to your MusharaqaHub personal account.</div>
+      <div class="testcreds">
+        <span data-i18n="login.testlabel">Test access for review:</span><br>
+        <span data-i18n="login.testlogin">Login</span>: <b>demo@musharaqahub.com</b><br>
+        <span data-i18n="login.testpass">Password</span>: <b>demo2026</b>
+      </div>
+      <form onsubmit="return doLogin(event)">
+        <label data-i18n="login.email">E-mail</label>
+        <input type="email" id="lemail" required placeholder="demo@musharaqahub.com">
+        <label data-i18n="login.pass">Password</label>
+        <input type="password" id="lpass" required placeholder="••••••••">
+        <div class="auth-err" id="lerr" data-i18n="login.err">Invalid login or password.</div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:20px" data-i18n="login.btn">Log in</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<div class="dash-wrap" id="dash">
+  <div class="dash-top"><div class="shell nav">
+    <a href="index.html" class="brand"><img class="mark" src="logo-icon.png" alt=""><span class="bn">Musharaqa<b>Hub</b></span></a>
+    <div class="who"><div class="lang-switch"><button type="button" data-lang="en" class="active" onclick="setLang('en')">EN</button><button type="button" data-lang="ru" onclick="setLang('ru')">RU</button><button type="button" data-lang="kz" onclick="setLang('kz')">KZ</button></div><span id="whoami">Demo Client</span><a href="#" onclick="doLogout(event)" class="btn btn-ghost" style="padding:8px 14px" data-i18n="logout">Log out</a></div>
+  </div></div>
+
+  <section class="shell" style="padding:34px 24px">
+    <span class="eyebrow" data-i18n="dash.eyebrow">Personal account</span>
+    <h1 style="margin-top:8px" data-i18n="dash.h1">Welcome, Demo Client</h1>
+    <p class="muted" data-i18n="dash.sub">Here you manage the digital processing of your intellectual-property object.</p>
+
+    <div class="dash-grid">
+      <div class="panel">
+        <div style="display:flex;justify-content:space-between;align-items:start;gap:12px">
+          <div><h3 data-i18n="dash.obj">IP object: trademark “EXAMPLE”</h3><div class="meta" data-i18n="dash.objid">ID: MH-IP-000128 · submitted 03.11.2026</div></div>
+          <span class="status-pill sp-proc" data-i18n="dash.proc">In processing</span>
+        </div>
+        <div class="progress"><i style="width:40%"></i></div>
+        <div class="meta" style="margin-top:8px" data-i18n="dash.stage">Stage 4 of 10 — producing electronic documentation</div>
+
+        <h3 style="margin-top:26px" data-i18n="dash.modules">Platform modules</h3>
+        <div class="mod-row"><span data-i18n="dash.m1">Digital processing of IP data</span><span class="status-pill sp-proc" data-i18n="dash.active">Active</span></div>
+        <div class="mod-row"><span data-i18n="dash.m2">Digital register of IP records</span><span class="status-pill sp-ok" data-i18n="dash.on">Enabled</span></div>
+        <div class="mod-row"><span data-i18n="dash.m3">Ethical-compliance check (Shariah)</span><span class="status-pill sp-ok" data-i18n="dash.on">Enabled</span></div>
+
+        <h3 style="margin-top:26px" data-i18n="dash.docs">Documents</h3>
+        <div class="doc-row"><span data-i18n="dash.d1">Object description (PDF)</span><a href="#" onclick="return demoClick(event)" data-i18n="dash.view">View</a></div>
+        <div class="doc-row"><span data-i18n="dash.d2">Register statement (PDF)</span><a href="#" onclick="return demoClick(event)" data-i18n="dash.view">View</a></div>
+        <div class="doc-row"><span data-i18n="dash.d3">Ethical-compliance report (PDF)</span><a href="#" onclick="return demoClick(event)" data-i18n="dash.view">View</a></div>
+      </div>
+
+      <div class="panel">
+        <h3 data-i18n="dash.billing">Billing</h3>
+        <div class="meta" data-i18n="dash.order">Order MH-2026-000128</div>
+        <div class="bill-row" style="margin-top:12px"><span data-i18n="dash.service">Full platform access</span><span>15 000 USD</span></div>
+        <div class="bill-row"><span data-i18n="dash.inkzt">In tenge (indicative)</span><span>6 750 000 ₸</span></div>
+        <div class="bill-row total"><span data-i18n="dash.due">To pay</span><span>6 750 000 ₸</span></div>
+        <div style="margin-top:8px"><span class="status-pill sp-wait" data-i18n="dash.awaiting">Awaiting payment</span></div>
+        <a href="payment.html" class="btn btn-gold btn-block" style="margin-top:18px" data-i18n="dash.pay">Pay by card</a>
+        <a href="payment-flow.html" class="btn btn-ghost btn-block" style="margin-top:10px" data-i18n="dash.flow">How payment works</a>
+
+        <h3 style="margin-top:26px" data-i18n="dash.support">Support</h3>
+        <p class="meta" style="margin-top:6px">E-mail: <a href="mailto:info@musharaqahub.com" style="color:var(--ink);font-weight:600">info@musharaqahub.com</a><br>+7 777 243 14 17</p>
+      </div>
+    </div>
+  </section>
+  <footer class="site"><div class="shell"><p class="copy">© 2026 MusharaqaHub · <span data-i18n="demo.note">Demonstration environment</span></p></div></footer>
+</div>
+
+<script>
+const RU={
+"title":"Личный кабинет (демо) — MusharaqaHub",
+"ribbon":"Демонстрационная / тестовая среда — демо-данные, реальных операций нет",
+"home":"← На главную",
+"login.h1":"Личный кабинет","login.sub":"Войдите в личный кабинет MusharaqaHub.",
+"login.testlabel":"Тестовый доступ для проверки:","login.testlogin":"Логин","login.testpass":"Пароль",
+"login.email":"E-mail","login.pass":"Пароль","login.err":"Неверный логин или пароль.","login.btn":"Войти",
+"logout":"Выйти",
+"dash.eyebrow":"Личный кабинет","dash.h1":"Добро пожаловать, Demo Client","dash.sub":"Здесь вы управляете цифровой обработкой вашего объекта интеллектуальной собственности.",
+"dash.obj":"Объект ИС: товарный знак «EXAMPLE»","dash.objid":"ID: MH-IP-000128 · заявка от 03.11.2026","dash.proc":"В обработке",
+"dash.stage":"Этап 4 из 10 — формирование электронной документации",
+"dash.modules":"Модули платформы","dash.m1":"Цифровая обработка данных об ИС","dash.m2":"Цифровой реестр сведений об ИС","dash.m3":"Проверка на соответствие нормам этики (Шариа)",
+"dash.active":"Активен","dash.on":"Подключён",
+"dash.docs":"Документы","dash.d1":"Описание объекта (PDF)","dash.d2":"Выписка из реестра (PDF)","dash.d3":"Отчёт о соответствии нормам этики (PDF)","dash.view":"Открыть",
+"dash.billing":"Оплата","dash.order":"Заказ MH-2026-000128","dash.service":"Полный доступ к платформе","dash.inkzt":"В тенге (ориентировочно)","dash.due":"К оплате","dash.awaiting":"Ожидает оплаты",
+"dash.pay":"Оплатить картой","dash.flow":"Как проходит оплата","dash.support":"Поддержка",
+"demo.note":"Демонстрационная среда"
+};
+const KZ={"title": "Жеке кабинет (демо) — MusharaqaHub", "ribbon": "Демонстрациялық / сынақ ортасы — демо-деректер, нақты операциялар жоқ", "home": "← Басты бетке", "login.h1": "Жеке кабинет", "login.sub": "MusharaqaHub жеке кабинетіне кіріңіз.", "login.testlabel": "Тексеруге арналған сынақ қолжетімділігі:", "login.testlogin": "Логин", "login.testpass": "Құпиясөз", "login.email": "E-mail", "login.pass": "Құпиясөз", "login.err": "Логин немесе құпиясөз қате.", "login.btn": "Кіру", "logout": "Шығу", "dash.eyebrow": "Жеке кабинет", "dash.h1": "Қош келдіңіз, Demo Client", "dash.sub": "Мұнда сіз зияткерлік меншік объектіңіздің цифрлық өңделуін басқарасыз.", "dash.obj": "ЗМ объектісі: «EXAMPLE» тауар белгісі", "dash.objid": "ID: MH-IP-000128 · өтінім 03.11.2026", "dash.proc": "Өңделуде", "dash.stage": "4-кезең / 10 — электрондық құжаттаманы қалыптастыру", "dash.modules": "Платформа модульдері", "dash.m1": "ЗМ туралы деректерді цифрлық өңдеу", "dash.m2": "ЗМ туралы мәліметтердің цифрлық тізілімі", "dash.m3": "Этика (Шариғат) нормаларына сәйкестікті тексеру", "dash.active": "Белсенді", "dash.on": "Қосылған", "dash.docs": "Құжаттар", "dash.d1": "Объект сипаттамасы (PDF)", "dash.d2": "Тізілімнен үзінді (PDF)", "dash.d3": "Этика нормаларына сәйкестік туралы есеп (PDF)", "dash.view": "Ашу", "dash.billing": "Төлем", "dash.order": "MH-2026-000128 тапсырысы", "dash.service": "Платформаға толық қолжетімділік", "dash.inkzt": "Теңгемен (болжамды)", "dash.due": "Төлеуге", "dash.awaiting": "Төлем күтілуде", "dash.pay": "Картамен төлеу", "dash.flow": "Төлем қалай өтеді", "dash.support": "Қолдау", "demo.note": "Демонстрациялық орта"};
+function setLang(l){document.documentElement.lang=l;
+ document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');
+  if(l!=='en'){if(el.getAttribute('data-en')===null)el.setAttribute('data-en',el.innerHTML);var _d=(l==='kz'?KZ:RU);if(_d&&_d[k]!=null)el.innerHTML=_d[k];else el.innerHTML=el.getAttribute('data-en');}
+  else if(el.getAttribute('data-en')!==null){el.innerHTML=el.getAttribute('data-en');}});
+ const t=document.querySelector('[data-i18n="title"]');if(t)document.title=t.textContent;
+ document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.toggle('active',b.getAttribute('data-lang')===l));
+ try{localStorage.setItem('lang',l)}catch(e){}}
+function show(logged){document.getElementById('login').style.display=logged?'none':'block';document.getElementById('dash').style.display=logged?'block':'none';}
+function doLogin(e){e.preventDefault();
+ const em=document.getElementById('lemail').value.trim().toLowerCase(),pw=document.getElementById('lpass').value;
+ if(em==='demo@musharaqahub.com'&&pw==='demo2026'){try{sessionStorage.setItem('mh_demo','1')}catch(x){}show(true);window.scrollTo(0,0);}
+ else{document.getElementById('lerr').style.display='block';}
+ return false;}
+function doLogout(e){e.preventDefault();try{sessionStorage.removeItem('mh_demo')}catch(x){}show(false);}
+function demoClick(e){e.preventDefault();alert(document.documentElement.lang==='ru'?'Демо-документ. В рабочей версии откроется PDF.':'Demo document. In production this opens a PDF.');return false;}
+try{if(sessionStorage.getItem('mh_demo'))show(true);else show(false);}catch(x){show(false);}
+try{var _s=localStorage.getItem('lang');if(_s==='ru'||_s==='kz')setLang(_s);}catch(e){}
+</script>
+</body>
+</html>

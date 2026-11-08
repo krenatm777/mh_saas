@@ -17,7 +17,7 @@
     <div class="nav-cta">
       <div class="lang-switch">
         <button type="button" data-lang="en" class="active" onclick="setLang('en')">EN</button>
-        <button type="button" data-lang="ru" onclick="setLang('ru')">RU</button>
+        <button type="button" data-lang="ru" onclick="setLang('ru')">RU</button><button type="button" data-lang="kz" onclick="setLang('kz')">KZ</button>
       </div>
       <a href="index.html" class="btn btn-ghost" data-i18n="back">← Home</a>
     </div>
@@ -30,7 +30,11 @@
     <h1 style="margin-top:10px" data-i18n="h1">Request access to the MusharaqaHub platform</h1>
     <p class="lead" style="margin-top:14px" data-i18n="lead">Fill in the form — a specialist will contact you to clarify the details and prepare an offer under a limited software licence.</p>
 
-    <form id="orderForm" method="post" action="#" onsubmit="return submitForm(event)">
+    <!-- ПОДКЛЮЧЕНИЕ ФОРМЫ: создайте форму на formspree.io и вставьте её ID вместо YOUR_FORMSPREE_ID -->
+    <form id="orderForm" method="post" action="https://formspree.io/f/xwlljdzp" accept-charset="UTF-8">
+      <input type="hidden" name="_subject" value="MusharaqaHub — новая заявка с сайта">
+      <input type="hidden" name="_next" id="nextField" value="thanks.html">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <h2 style="font-size:1.25rem;margin-top:42px" data-i18n="b1">1. Applicant information</h2>
 
       <div class="fgroup">
@@ -106,7 +110,7 @@
 
       <h2 style="font-size:1.25rem;margin-top:42px" data-i18n="b3">3. Cost and terms</h2>
       <div class="callout" style="margin-top:14px">
-        <p data-i18n="b3p"><strong>Base access cost — 15 000 USD / ≈ 6 750 000 ₸.</strong> Card payments are processed in tenge (KZT) at the NBK rate on the payment date. The final cost, scope and licence term are agreed individually based on the analysis of your IP object and fixed in the contract (offer). Payment can be made in tranches.</p>
+        <p data-i18n="b3p"><strong>Base access cost — 15 000 USD / ≈ 6 750 000 ₸.</strong> Card payments are processed in tenge (KZT) at the NBK rate on the payment date. Individual services and modules are also available — from 500 000 ₸. The final cost, scope and licence term are agreed individually based on the analysis of your IP object and fixed in the contract (offer). Payment can be made in tranches.</p>
       </div>
 
       <div class="fgroup">
@@ -170,7 +174,7 @@ const RU = {
  "f.docs":"Наличие подготовленных документов","f.docs1":"Да, документы подготовлены","f.docs2":"Частично подготовлены","f.docs3":"Не подготовлены, требуется помощь",
  "f.modules":"Планируемые модули платформы (можно выбрать несколько)","f.mod1":"Цифровая обработка данных об ИС","f.mod2":"Цифровой реестр сведений об ИС","f.mod3":"Проверка на соответствие нормам этики (Шариа)","f.mod4":"Подключение оплаты услуг","f.mod5":"Техническое сопровождение",
  "b3":"3. Стоимость и условия",
- "b3p":"<strong>Базовая стоимость доступа — 15 000 USD / ≈ 6 750 000 ₸.</strong> Оплата банковской картой проводится в тенге (KZT) по курсу НБ РК на дату платежа. Окончательная стоимость, состав услуг и срок лицензии согласовываются индивидуально по результатам анализа объекта ИС и фиксируются в договоре (оферте). Возможна оплата траншами.",
+ "b3p":"<strong>Базовая стоимость доступа — 15 000 USD / ≈ 6 750 000 ₸.</strong> Оплата банковской картой проводится в тенге (KZT) по курсу НБ РК на дату платежа. Доступны также отдельные услуги и модули — от 500 000 ₸. Окончательная стоимость, состав услуг и срок лицензии согласовываются индивидуально по результатам анализа объекта ИС и фиксируются в договоре (оферте). Возможна оплата траншами.",
  "f.pref":"Предпочтительный способ связи","f.pref2":"Телефон","f.pref3":"Мессенджер (указать в комментарии)",
  "f.comment":"Комментарий (необязательно)",
  "b4":"4. Согласия и подтверждения",
@@ -182,19 +186,26 @@ const RU = {
  "after.h":"Что происходит после отправки заявки","after.1":"Заявка регистрируется и получает уникальный номер.","after.2":"В течение 1 (одного) рабочего дня с вами связывается специалист MusharaqaHub для уточнения параметров объекта ИС.","after.3":"По результатам анализа формируется индивидуальное предложение и договор (оферта).","after.4":"После согласования условий производится оплата банковской картой через защищённую платёжную страницу, и предоставляется доступ к платформе.",
  "foot.offer":"Оферта","foot.privacy":"Конфиденциальность","foot.refund":"Возврат"
 };
+const KZ={"meta.title": "MusharaqaHub-қа қолжетімділікке өтінім", "back": "← Басты бетке", "eyebrow": "Өтінім", "h1": "MusharaqaHub платформасына қолжетімділік беруге өтінім", "lead": "Форманы толтырыңыз — маман сізбен байланысып, бағдарламалық қамтамасыз етуге шектеулі лицензия шарттарында ұсыныс дайындау үшін егжей-тегжейін нақтылайды.", "b1": "1. Өтініш беруші туралы ақпарат", "f.type": "Өтініш беруші түрі *", "f.type1": "Жеке тұлға", "f.type2": "Жеке кәсіпкер", "f.type3": "Заңды тұлға", "f.name": "Тегі, аты, әкесінің аты (толық) *", "f.nameh": "Өтініш беруші атынан әрекет етуге уәкілетті тұлғаның деректерін көрсетіңіз.", "f.org": "Ұйым атауы (ЖК және заңды тұлғалар үшін)", "f.bin": "БСН / ЖСН", "f.country": "Тіркелген елі", "f.phone": "Байланыс телефоны *", "f.email": "Байланыс e-mail *", "f.emailh": "Көрсетілген мекенжайға ұсыныс пен шарт (оферта) жіберіледі.", "b2": "2. Зияткерлік меншік объектісі туралы ақпарат", "f.iptype": "ЗМ объектісінің түрі *", "f.ip1": "Туынды (мәтін, бейне, аудио, видео)", "f.ip2": "Бағдарламалық қамтамасыз ету", "f.ip3": "Өнеркәсіптік үлгі / пайдалы модель", "f.ip4": "Тауар белгісі / атауы", "f.ip5": "Ноу-хау / дерекқор", "f.ip6": "Өзге", "f.ipdesc": "ЗМ объектісінің қысқаша сипаттамасы", "f.ipdesch": "Объектіні бірнеше сөйлеммен сипаттаңыз — бұл жұмыс көлемін алдын ала бағалауға көмектеседі.", "f.docs": "Дайындалған құжаттардың болуы", "f.docs1": "Иә, құжаттар дайындалған", "f.docs2": "Ішінара дайындалған", "f.docs3": "Дайындалмаған, көмек қажет", "f.modules": "Жоспарланған платформа модульдері (бірнешеуін таңдауға болады)", "f.mod1": "ЗМ туралы деректерді цифрлық өңдеу", "f.mod2": "ЗМ туралы мәліметтердің цифрлық тізілімі", "f.mod3": "Этика нормаларына сәйкестікті тексеру (Шариғат)", "f.mod4": "Қызметтер төлемін қосу", "f.mod5": "Техникалық сүйемелдеу", "b3": "3. Құны мен шарттары", "b3p": "<strong>Қолжетімділіктің базалық құны — 15 000 USD / ≈ 6 750 000 ₸.</strong> Банктік картамен төлем төлем күніне ҚР ҰБ бағамы бойынша теңгемен (KZT) жүргізіледі. Сондай-ақ жеке қызметтер мен модульдер қолжетімді — 500 000 ₸-ден бастап. Қорытынды құн, қызметтер құрамы және лицензия мерзімі ЗМ объектісін талдау нәтижесі бойынша жеке келісіледі және шартта (офертада) бекітіледі. Транштармен төлеу мүмкін.", "f.pref": "Байланыстың қолайлы тәсілі", "f.pref2": "Телефон", "f.pref3": "Мессенджер (пікірде көрсету)", "f.comment": "Пікір (міндетті емес)", "b4": "4. Келісімдер мен растаулар", "c1": "MusharaqaHub шектеулі лицензия (SaaS) шарттарында ұсынылатын және зияткерлік меншік объектілері туралы деректерді өңдеуге арналған бағдарламалық қамтамасыз ету болып табылатынымен таныстығымды растаймын. Платформаның қаржы ұйымы болып табылмайтынын, инвестициялық және брокерлік қызметтер көрсетпейтінін, ақшамен, бағалы қағаздармен және цифрлық активтермен операциялар жасамайтынын және пайда немесе өзге қаржылық нәтиже алуға кепілдік бермейтінін түсінемін.", "c2": "Қазақстан Республикасының дербес деректер және оларды қорғау туралы заңнамасына және <a href=\"privacy.html\">Құпиялылық саясатына</a> сәйкес өтінімді қарау, ұсыныс дайындау және шарт жасасу мақсатында дербес деректерімді өңдеуге келісім беремін.", "c3": "Көрсетілген зияткерлік меншік объектісіне қажетті құқықтарым бар екенін және тиісті деректерді MusharaqaHub платформасына өңдеуге беруге уәкілетті екенімді растаймын.", "c4": "<a href=\"oferta.html\">Жария оферта</a> және <a href=\"refund.html\">Қайтару шарттары</a> талаптарымен таныстым және келісемін.", "submit": "Өтінімді жіберу", "subnote": "«Өтінімді жіберу» түймесін басу арқылы сіз дербес деректерді өңдеу шарттарымен және MusharaqaHub платформасына қолжетімділік беру шарттарымен келісетініңізді растайсыз.", "after.h": "Өтінім жіберілгеннен кейін не болады", "after.1": "Өтінім тіркеліп, бірегей нөмір алады.", "after.2": "1 (бір) жұмыс күні ішінде MusharaqaHub маманы ЗМ объектісінің параметрлерін нақтылау үшін сізбен байланысады.", "after.3": "Талдау нәтижесі бойынша жеке ұсыныс пен шарт (оферта) қалыптастырылады.", "after.4": "Шарттар келісілгеннен кейін банктік картамен қорғалған төлем беті арқылы төлем жүргізіледі және платформаға қолжетімділік беріледі.", "foot.offer": "Оферта", "foot.privacy": "Құпиялылық", "foot.refund": "Қайтару"};
 function setLang(l){
   document.documentElement.lang=l;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.getAttribute('data-i18n');
-    if(l==='ru'){ if(el.getAttribute('data-en')===null) el.setAttribute('data-en',el.innerHTML); if(RU[k]!=null) el.innerHTML=RU[k]; }
+    if(l!=='en'){ if(el.getAttribute('data-en')===null) el.setAttribute('data-en',el.innerHTML); var _d=(l==='kz'?KZ:RU); if(_d&&_d[k]!=null) el.innerHTML=_d[k]; else el.innerHTML=el.getAttribute('data-en'); }
     else if(el.getAttribute('data-en')!==null){ el.innerHTML=el.getAttribute('data-en'); }
   });
   const t=document.querySelector('[data-i18n="meta.title"]'); if(t) document.title=t.textContent;
   document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.toggle('active',b.getAttribute('data-lang')===l));
   try{localStorage.setItem('lang',l)}catch(e){}
 }
-function submitForm(e){e.preventDefault();alert(document.documentElement.lang==='ru'?'Форма демонстрационная. Подключите обработчик (action) перед запуском.':'This is a demo form. Connect a handler (action) before launch.');return false;}
-try{const sv=localStorage.getItem('lang'); if(sv==='ru') setLang('ru');}catch(e){}
+// absolute redirect URL for Formspree after successful submit
+try{var nf=document.getElementById('nextField'); if(nf) nf.value=new URL('thanks.html',location.href).href;}catch(e){}
+// guard: warn if the Formspree endpoint has not been configured yet
+document.getElementById('orderForm').addEventListener('submit',function(e){
+  if(this.action.indexOf('YOUR_FORMSPREE_ID')>-1){e.preventDefault();
+    alert(document.documentElement.lang==='ru'?'Форма ещё не подключена: вставьте ID формы Formspree в атрибут action.':'Form not connected yet: paste your Formspree form ID into the action attribute.');}
+});
+try{const sv=localStorage.getItem('lang'); if(sv==='ru'||sv==='kz') setLang(sv);}catch(e){}
 </script>
 </body>
 </html>

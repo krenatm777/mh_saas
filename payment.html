@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="title">Payment — MusharaqaHub</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="logo-icon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="demo-ribbon" data-i18n="ribbon">Demonstration / test environment — the Pay button will connect to the PayLink secure page</div>
+<header class="site"><div class="shell nav">
+  <a href="index.html" class="brand"><img class="mark" src="logo-icon.png" alt=""><span class="bn">Musharaqa<b>Hub</b></span></a>
+  <div class="nav-cta"><div class="lang-switch"><button type="button" data-lang="en" class="active" onclick="setLang('en')">EN</button><button type="button" data-lang="ru" onclick="setLang('ru')">RU</button><button type="button" data-lang="kz" onclick="setLang('kz')">KZ</button></div><a href="cabinet.html" class="btn btn-ghost" data-i18n="back">← Account</a></div>
+</div></header>
+
+<div class="pay-wrap">
+  <span class="eyebrow" data-i18n="eyebrow">Checkout</span>
+  <h1 style="margin:8px 0 20px" data-i18n="h1">Payment for platform access</h1>
+  <div class="order-card">
+    <div class="order-line"><span data-i18n="l.order">Order</span><span>MH-2026-000128</span></div>
+    <div class="order-line"><span data-i18n="l.service">Service</span><span data-i18n="l.servicev">Full platform access</span></div>
+    <div class="order-line"><span data-i18n="l.payer">Payer</span><span>Demo Client</span></div>
+    <div class="order-line"><span data-i18n="l.amount">Amount</span><span>15 000 USD</span></div>
+    <div class="order-line total"><span data-i18n="l.total">To pay (KZT)</span><span>6 750 000 ₸</span></div>
+
+    <div class="pay-note" data-i18n="note">The amount is charged in tenge (KZT) at the National Bank of Kazakhstan rate on the payment date. Card data is entered on the secure PayLink page and is not stored by MusharaqaHub.</div>
+
+    <button class="btn btn-gold btn-lg btn-block" onclick="pay()" data-i18n="paybtn">Pay by card →</button>
+    <div class="secure-row">
+      <span class="pb">VISA</span><span class="pb">Mastercard</span>
+      <span data-i18n="secure">· Secure payment · 3-D Secure · HTTPS</span>
+    </div>
+
+    <p class="small muted" style="margin-top:22px;text-align:center" data-i18n="demolinks">For review — view the result pages:
+      <a href="success.html" style="color:var(--ink);font-weight:600">successful payment</a> ·
+      <a href="fail.html" style="color:var(--ink);font-weight:600">failed payment</a>
+    </p>
+  </div>
+</div>
+
+<footer class="site"><div class="shell"><p class="copy">© 2026 MusharaqaHub · <a href="oferta.html" style="display:inline" data-i18n="l.offer">Offer</a> · <a href="refund.html" style="display:inline" data-i18n="l.refund">Refund</a></p></div></footer>
+
+<script>
+const RU={
+"title":"Оплата — MusharaqaHub",
+"ribbon":"Демонстрационная / тестовая среда — кнопка «Оплатить» будет подключена к защищённой странице PayLink",
+"back":"← В кабинет","eyebrow":"Оформление оплаты","h1":"Оплата доступа к платформе",
+"l.order":"Заказ","l.service":"Услуга","l.servicev":"Полный доступ к платформе","l.payer":"Плательщик","l.amount":"Сумма","l.total":"К оплате (KZT)",
+"note":"Сумма списывается в тенге (KZT) по курсу Национального Банка РК на дату платежа. Данные карты вводятся на защищённой странице PayLink и не хранятся у MusharaqaHub.",
+"paybtn":"Оплатить картой →","secure":"· Защищённый платёж · 3-D Secure · HTTPS",
+"demolinks":"Для проверки — страницы результата: <a href=\"success.html\" style=\"color:var(--ink);font-weight:600\">успешная оплата</a> · <a href=\"fail.html\" style=\"color:var(--ink);font-weight:600\">неуспешная оплата</a>",
+"l.offer":"Оферта","l.refund":"Возврат"
+};
+// PayLink integration point: replace with the real payment link/widget when provided.
+var PAYLINK_URL="";
+function pay(){
+ if(PAYLINK_URL){location.href=PAYLINK_URL;return;}
+ alert(document.documentElement.lang==='ru'
+  ?'Здесь откроется защищённая страница оплаты PayLink. Интеграция подключается после получения платёжной ссылки/ключей от PayLink.'
+  :'This will open the secure PayLink payment page. Integration is connected once the PayLink payment link / keys are provided.');
+}
+const KZ={"title": "Төлем — MusharaqaHub", "ribbon": "Демонстрациялық / сынақ ортасы — «Төлеу» түймесі PayLink қорғалған бетіне қосылады", "back": "← Кабинетке", "eyebrow": "Төлемді ресімдеу", "h1": "Платформаға қолжетімділік төлемі", "l.order": "Тапсырыс", "l.service": "Қызмет", "l.servicev": "Платформаға толық қолжетімділік", "l.payer": "Төлеуші", "l.amount": "Сома", "l.total": "Төлеуге (KZT)", "note": "Сома төлем күніне ҚР Ұлттық Банкінің бағамы бойынша теңгемен (KZT) есептен шығарылады. Карта деректері PayLink қорғалған бетінде енгізіледі және MusharaqaHub-та сақталмайды.", "paybtn": "Картамен төлеу →", "secure": "· Қорғалған төлем · 3-D Secure · HTTPS", "demolinks": "Тексеруге — нәтиже беттері: <a href=\"success.html\" style=\"color:var(--ink);font-weight:600\">сәтті төлем</a> · <a href=\"fail.html\" style=\"color:var(--ink);font-weight:600\">сәтсіз төлем</a>", "l.offer": "Оферта", "l.refund": "Қайтару"};
+function setLang(l){document.documentElement.lang=l;
+ document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');
+  if(l!=='en'){if(el.getAttribute('data-en')===null)el.setAttribute('data-en',el.innerHTML);var _d=(l==='kz'?KZ:RU);if(_d&&_d[k]!=null)el.innerHTML=_d[k];else el.innerHTML=el.getAttribute('data-en');}
+  else if(el.getAttribute('data-en')!==null){el.innerHTML=el.getAttribute('data-en');}});
+ const t=document.querySelector('[data-i18n="title"]');if(t)document.title=t.textContent;
+ document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.toggle('active',b.getAttribute('data-lang')===l));
+ try{localStorage.setItem('lang',l)}catch(e){}}
+try{var _s=localStorage.getItem('lang');if(_s==='ru'||_s==='kz')setLang(_s);}catch(e){}
+</script>
+</body>
+</html>
